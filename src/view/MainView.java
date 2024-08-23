@@ -39,8 +39,14 @@ public class MainView {
     }
 
     @FXML
-    void btnLoginOnAction(ActionEvent event) {
-
+    void btnLoginOnAction(ActionEvent event) throws IOException {
+        //for test
+        URL resource = this.getClass().getResource("/view/BookCatagary.fxml");
+        Parent root = FXMLLoader.load(resource);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+        stage.setTitle("Membership Form");
     }
 
 }
