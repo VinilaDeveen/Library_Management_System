@@ -1,7 +1,10 @@
 package view;
 
+import java.util.List;
+
 import controller.BookCatagoryController;
 import dto.BookCatagoryDto;
+import dto.BookDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -74,6 +77,7 @@ public class BookCategoryView {
         searchCategory();
     }
 
+
     private void saveCategory() {
         try {
             BookCatagoryDto dto = new BookCatagoryDto(txtCategoryID.getText(), txtCategoryName.getText());
@@ -82,7 +86,7 @@ public class BookCategoryView {
             // Display confirmation dialog
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Category saved successfully.");
             alert.showAndWait();
-
+            loadTable();
             clearForm();
         } catch (Exception e) {
             e.printStackTrace();
@@ -118,8 +122,13 @@ public class BookCategoryView {
     }
 
     private void loadTable() throws Exception {
-        ObservableList<BookCatagoryDto> bookCatagoryDtos = FXCollections.observableArrayList(bookCatagoryController.getAll());
-        tblCatogories.setItems(bookCatagoryDtos);
+        List<BookCatagoryDto> books = bookCatagoryController.getAll();
+        if (books != null) {
+            ObservableList<BookCatagoryDto> bookCatagoryDtos = FXCollections.observableArrayList(bookCatagoryController.getAll());
+            tblCatogories.setItems(bookCatagoryDtos);
+        } else {
+            tblCatogories.setItems(FXCollections.observableArrayList());
+        }
     }
 
     private void searchCategory() {
