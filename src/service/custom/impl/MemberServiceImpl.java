@@ -51,6 +51,15 @@ public class MemberServiceImpl implements MemberService{
         return null;
     }
 
+    @Override
+    public MemberDto login(String username, String password) throws Exception {
+        MemberEntity memberEntity = memberDao.getByUsernameAndPassword(username, password);
+        if (memberEntity != null) {
+            return getMemberDto(memberEntity);
+        }
+        return null;
+    }
+
     private MemberEntity getMemberEntity(MemberDto memberDto){
         return new MemberEntity(
             memberDto.getMemId(),

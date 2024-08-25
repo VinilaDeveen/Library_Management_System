@@ -120,6 +120,16 @@ public class BookView {
     }
 
     @FXML
+    void btnUpdateProfileOnAction(ActionEvent event) throws IOException {
+        URL resource = this.getClass().getResource("/view/UpdateMember.fxml");
+        Parent root = FXMLLoader.load(resource);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+        stage.setTitle("Borrow Book");
+    }
+
+    @FXML
     void btnBorrowOnAction(ActionEvent event) throws IOException {
         URL resource = this.getClass().getResource("/view/Borrow.fxml");
         Parent root = FXMLLoader.load(resource);

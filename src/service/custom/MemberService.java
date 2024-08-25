@@ -11,4 +11,6 @@ public interface MemberService extends SuperService{
     String delete(String memID) throws Exception;
     MemberDto get(String memID) throws Exception;
     ArrayList<MemberDto> getAll() throws Exception;
+
+    public MemberDto login(String username, String password) throws Exception;
 }
