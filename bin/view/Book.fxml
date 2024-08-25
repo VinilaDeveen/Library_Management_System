@@ -46,17 +46,22 @@
             <Font size="13.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="564.0" layoutY="358.0" onAction="#btnLoadAllCategoryOnAction" prefHeight="27.0" prefWidth="189.0" style="-fx-background-color: #5f10e0;" text="Load all Data " textFill="#fffefe">
+      <JFXButton buttonType="RAISED" layoutX="656.0" layoutY="358.0" onAction="#btnLoadAllCategoryOnAction" prefHeight="27.0" prefWidth="97.0" style="-fx-background-color: #5f10e0;" text="Load all Data " textFill="#fffefe">
          <font>
             <Font size="13.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="202.0" layoutY="358.0" onAction="#btnBookCategotyOnAction" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #2c3e50;" text="Book Categories" textFill="#fffefe">
+      <JFXButton buttonType="RAISED" layoutX="202.0" layoutY="358.0" onAction="#btnBookCategotyOnAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #2c3e50;" text="Book Categories" textFill="#fffefe">
          <font>
             <Font size="13.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="384.0" layoutY="358.0" onAction="#btnBorrowOnAction" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #f39c12;" text="Borrow Books" textFill="#fffefe">
+      <JFXButton buttonType="RAISED" layoutX="358.0" layoutY="358.0" onAction="#btnBorrowOnAction" prefHeight="27.0" prefWidth="105.0" style="-fx-background-color: #f39c12;" text="Borrow Books" textFill="#fffefe">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="498.0" layoutY="358.0" onAction="#btnReturnOnAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #2980b9;" text="Return Books" textFill="#fffefe">
          <font>
             <Font size="13.0" />
          </font>
