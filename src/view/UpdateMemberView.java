@@ -89,10 +89,12 @@ public class UpdateMemberView {
                 txtUserName.setText(dto.getUserName());
                 txtPassword.setText(dto.getPassword());
             } else {
-                new Alert(Alert.AlertType.ERROR, "Member not found");
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Member not found");
+                alert.show();
             }
         } catch (Exception e) {
-            new Alert(Alert.AlertType.ERROR, "Error at lead mamber details");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Error at lead mamber details");
+            alert.show();
         }
     }
 
