@@ -97,7 +97,4 @@ public class BorrowDto {
                 + dueDate + ", returnDate=" + returnDate + ", fines=" + fines + ", borrowDetailDtos=" + borrowDetailDtos
                 + "]";
     }
-
-    
-    
 }

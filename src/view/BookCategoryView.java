@@ -68,7 +68,6 @@ public class BookCategoryView {
         colCategoryID.setCellValueFactory(new PropertyValueFactory<>("catagoryId"));
         colCategoryName.setCellValueFactory(new PropertyValueFactory<>("catagoryName"));
         
-        // Load the table with data on initialization
         loadTable();
     }
 
@@ -83,7 +82,6 @@ public class BookCategoryView {
             BookCatagoryDto dto = new BookCatagoryDto(txtCategoryID.getText(), txtCategoryName.getText());
             String resp = bookCatagoryController.save(dto);
 
-            // Display confirmation dialog
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Category saved successfully.");
             alert.showAndWait();
             loadTable();

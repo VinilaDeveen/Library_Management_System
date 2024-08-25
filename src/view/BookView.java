@@ -86,6 +86,16 @@ public class BookView {
     }
 
     @FXML
+    void btnReturnOnAction(ActionEvent event) throws IOException {
+        URL resource = this.getClass().getResource("/view/Return.fxml");
+        Parent root = FXMLLoader.load(resource);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+        stage.setTitle("Return Book");
+    }
+
+    @FXML
     void btnDeleteOnAction(ActionEvent event) {
         deleteBook();
     }

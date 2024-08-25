@@ -10,4 +10,8 @@ public class BorrowController {
     public String placeBorrow(BorrowDto borrowDto) throws Exception {
         return borrowService.placeBorrow(borrowDto);
     }
+
+    public String processReturn(String borrowId, String returnDate) throws Exception {
+        return borrowService.processReturn(borrowId, returnDate);
+    }
 }

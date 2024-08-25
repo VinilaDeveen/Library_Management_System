@@ -1,5 +1,6 @@
 package dao.custom.impl;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import dao.CrudUtil;
@@ -15,7 +16,7 @@ public class BorrowDaoImpl implements BorrowDao {
 
     @Override
     public boolean update(BorrowEntity t) throws Exception {
-        return false;
+        return CrudUtil.executeUpdate("UPDATE Borrow SET ReturnDate = ?, Fine = ? WHERE BorrowID = ?", t.getReturnDate(), t.getFines(), t.getBorrowId());
     }
 
     @Override
@@ -25,6 +26,12 @@ public class BorrowDaoImpl implements BorrowDao {
 
     @Override
     public BorrowEntity get(String id) throws Exception {
+        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Borrow WHERE BorrowID = ?", id);
+        if (rst.next()) {
+            BorrowEntity entity = new BorrowEntity(rst.getString("BorrowID"),rst.getString("MemberID"),
+            rst.getString("BorrowDate"),rst.getString("DueDate"),rst.getString("ReturnDate"),rst.getDouble("Fine"));
+            return entity;
+        }
         return null;
     }
 
