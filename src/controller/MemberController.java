@@ -28,4 +28,8 @@ public class MemberController {
     public MemberDto get(String memId) throws Exception{
         return memberService.get(memId);
     }
+
+    public MemberDto login(String username, String password) throws Exception {
+        return memberService.login(username, password);
+    }
 }

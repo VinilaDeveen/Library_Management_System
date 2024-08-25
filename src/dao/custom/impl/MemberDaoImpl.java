@@ -49,4 +49,18 @@ public class MemberDaoImpl implements MemberDao{
         return memberEntities;
     }
     
+    @Override
+public MemberEntity getByUsernameAndPassword(String username, String password) throws Exception {
+    ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Member WHERE UserName = ? AND UserPassword = ?", username, password);
+    if (rst.next()) {
+        return new MemberEntity(
+            rst.getString("MemID"),
+            rst.getString("MemName"),
+            rst.getString("Phone"),
+            rst.getString("UserName"),
+            rst.getString("UserPassword")
+        );
+    }
+    return null;
+}
 }
