@@ -39,7 +39,7 @@
           <TableColumn fx:id="colCategoryName" prefWidth="223.0" text="Category Name" />
         </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="397.0" layoutY="281.0" onAction="#btnLoadAllCategoryOnAction" prefHeight="27.0" prefWidth="189.0" style="-fx-background-color: #5f10e0;" text="Load all data categories" textFill="#fffefe">
+      <JFXButton buttonType="RAISED" layoutX="397.0" layoutY="281.0" onAction="#btnLoadAllCategoryOnAction" prefHeight="27.0" prefWidth="189.0" style="-fx-background-color: #5f10e0;" text="Load all Data" textFill="#fffefe">
          <font>
             <Font size="13.0" />
          </font>
