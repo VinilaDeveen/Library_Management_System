@@ -110,6 +110,16 @@ public class BookView {
     }
 
     @FXML
+    void btnBorrowOnAction(ActionEvent event) throws IOException {
+        URL resource = this.getClass().getResource("/view/Borrow.fxml");
+        Parent root = FXMLLoader.load(resource);
+        Stage stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.show();
+        stage.setTitle("Borrow Book");
+    }
+
+    @FXML
     private void initialize() throws Exception {
         colBookID.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         colBookName.setCellValueFactory(new PropertyValueFactory<>("title"));
