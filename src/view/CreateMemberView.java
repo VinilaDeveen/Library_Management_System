@@ -44,10 +44,12 @@ public class CreateMemberView {
             String resp;
             resp = memberController.save(dto);
             clearform();
-            new Alert(Alert.AlertType.CONFIRMATION, "Do you want sava this member?");
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want sava this member?");
+            alert.show();
 
         } catch (Exception e) {
-           new Alert(Alert.AlertType.ERROR, "Error to save");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Error to save");
+            alert.show();
         }
     }
 
